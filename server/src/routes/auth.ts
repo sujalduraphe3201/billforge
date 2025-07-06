@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { signup, login, me } from "../controllers/authController";
 import { authenticate } from "../middlewares/authmiddleware";
-
+import plansRoute from "./plans"
 const authRouter = Router();
 
 authRouter.post("/signup", signup);

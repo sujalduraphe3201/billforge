@@ -12,7 +12,8 @@ export function Navbar() {
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#" className="text-gray-700  font-medium">Home</a>
+            <a href="/dashboard" className="text-gray-700  font-medium">Home</a>
+            <a href="/pricing" className="text-gray-700  font-medium">Pricing</a>
             <a href="#" className="text-gray-700  font-medium">Contact</a>
 
           </div>
@@ -54,6 +55,7 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white px-4 pt-2 pb-4 space-y-2 shadow-md">
           <a href="#" className="block text-gray-700 ">Home</a>
+          <a href="/pricing" className="text-gray-700  font-medium">Pricing</a>
           <a href="#" className="block text-gray-700 ">Contact</a>
         </div>
       )}

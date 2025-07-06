@@ -7,7 +7,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<any>(null);
   const [subscription, setSubscription] = useState<any>(null);
-
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -32,7 +32,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="p-6 max-w-4xl mx-auto space-y-6">
         {/* 👤 User Info */}
         <div className="bg-white shadow-md p-5 rounded-xl">
