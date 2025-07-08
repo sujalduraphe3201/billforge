@@ -7,7 +7,6 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<any>(null);
   const [subscription, setSubscription] = useState<any>(null);
-  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -40,7 +39,6 @@ const Dashboard = () => {
           <p className="text-gray-600">Tenant ID: {user?.tenantId}</p>
         </div>
 
-        {/* 💳 Current Plan */}
         <div className="bg-white shadow-md p-5 rounded-xl">
           <h3 className="text-lg font-semibold mb-2">💳 Subscription</h3>
           {subscription ? (

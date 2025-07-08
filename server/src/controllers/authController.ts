@@ -1,8 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import bcrypt from "bcryptjs";
-import prisma from "../../prisma/client";
 import { generateToken } from "../utils/jwt";
-
+import { prisma } from "../../prisma/client";
 export const signup = async (req: Request, res: Response, next: NextFunction) => {
     const { name, email, password, tenantId, } = req.body;
 

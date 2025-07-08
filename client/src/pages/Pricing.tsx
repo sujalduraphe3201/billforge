@@ -9,7 +9,7 @@ const Pricing = () => {
         axios.get("/plans").then(res => setPlans(res.data));
     }, []);
 
-    const subscribe = async (planId: string) => {
+    const subscribe = async (planId: string,) => {
         try {
             await axios.post("/subscribe/subscribe", { planId });
             alert("Subscribed successfully!");

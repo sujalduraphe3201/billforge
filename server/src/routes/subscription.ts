@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
-import prisma from "../../prisma/client";
 import { authenticate } from "../middlewares/authmiddleware";
+import { prisma } from "../../prisma/client";
 const subscriptionRouter = Router();
 
 subscriptionRouter.use(authenticate);
